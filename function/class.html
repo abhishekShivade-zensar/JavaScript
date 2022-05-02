@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="document.getElementById("demo1").innerHTML = marutiCar.model">Maruti Car</button>
+    <p id="demo1"></p>
+    <script>
+        class car{
+            constructor (company,category,model,color,varient,price,year){
+                this.company = company;
+                this.category = category;
+                this.model = model;
+                this.color = color;
+                this.varient = varient;
+                this.price = price;
+                this.year = year;
+            }
+
+            age(){
+                let date = new Date();
+                return date.getFullYear()-this.year;
+            }
+        }
+
+        marutiCar = new car("Suzuki","MUV","Ertiga","White","Petrol",1250000,2010);
+
+        // function objrefer1(){
+        //     tataCar = new car("TATA","SUV","Nexon","Red","Petrol",1050000);
+
+        //     return tataCar.company +tataCar.category;
+        // }
+
+        document.getElementById("demo1").innerHTML= marutiCar.model;
+    </script>
+
+    
+
+<!-- <button type="submit" onclick=document.getElementById("demo1").innerHTML = marutiCar.model>Maruti Car</button> -->
+</body>
+</html>

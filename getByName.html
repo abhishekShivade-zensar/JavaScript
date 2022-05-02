@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p name="para"></p>
+    <p name="para"></p>
+    <p name="para"></p>
+
+    <script>
+        function fun1(arg1,arg2){
+            return arg1+arg2;
+        }
+        
+        function fun2(arg1,arg2){
+            return arg1-arg2;
+        }
+        
+        function fun3(arg1,arg2){
+            return arg1*arg2;
+        }
+
+        document.getElementsByName('para')[0].innerHTML=fun1(10,20);
+        document.getElementsByName('para')[1].innerHTML=fun2(40,20);
+        document.getElementsByName('para')[2].innerHTML=fun3(10,20);
+    </script>
+</body>
+</html>

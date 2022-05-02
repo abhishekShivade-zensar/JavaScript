@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text1"></p>
+    <p id="length"></p>
+    <p id="escape"></p>
+    <p id="escape1"></p>
+    <p id="filepath"></p>
+    <p id="address"></p>
+
+    <script>
+        let text = "Abhishek"
+        let text2= "Shivade"
+        let text3= "This is zensar's class";
+        let text4= "This is\"Banglore\"";
+        let filepath= "C:\\abhishek";
+        let address="zensar aghbvcvbhvt6teyirdfnxmc xc \
+        near pune india"
+
+        document.getElementById("text1").innerHTML=text+" "+text2;
+        document.getElementById("length").innerHTML="text length = "+text.length+"<br>text2 length = "+text2.length;
+        document.getElementById("escape").innerHTML=text3;
+        document.getElementById("escape1").innerHTML=text4;
+        document.getElementById("filepath").innerHTML=filepath;
+        document.getElementById("address").innerHTML=address;
+
+    </script>
+</body>
+</html>

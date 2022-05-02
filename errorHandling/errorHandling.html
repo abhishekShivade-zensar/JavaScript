@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Error Handling</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        let inputNumber = 1.9999999;
+        inputNumber.toPrecision(2);
+
+        try{
+            // addalert("praveen hegde");
+        // document.getElementById('demo1').innerHTML = inputNumber.toPrecision(0);
+
+        document.getElementById("demo").innerHTML = eval("'hsdjfj");
+
+        // inputNumber.toUpperCase();
+        decodeURI("%%%")
+        }catch(error){
+            document.getElementById('demo').innerHTML = error.message;
+
+            document.getElementById('demo1').innerHTML = error.name;
+        }
+    </script>
+</body>
+</html>

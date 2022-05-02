@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="dispdate"></p>
+    <p id="dispdate1"></p>
+
+    <script>
+        let date1 = new Date();
+        let date2 = new Date(2022,02,28,14,28,34,105);
+        let date3 = new Date(2022,02);
+        let date4 = new Date(1648459500000);
+
+        document.getElementById("dispdate").innerHTML = date1;
+        document.getElementById("dispdate1").innerHTML = date1.getDay()+" "+date1.getDate()+"/"+date1.getMonth()+"/"+date1.getFullYear()+" "+date1.getHours()+":"+date1.getMinutes();+" ";
+    </script>
+</body>
+</html>

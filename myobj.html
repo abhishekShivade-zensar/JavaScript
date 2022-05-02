@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="team"></p>
+
+    <script>
+        const sport = {
+            teamName : "India",
+            status : "National",
+            play : "Cricket",
+            coach : "Dravid",
+            player1 : "Rohit(C)",
+            player2: "KLR",
+            player3: "Virat",
+            player4 : "Shreyas",
+            player5 : "Pant(WK)",
+            player6 : "Hardik",
+            player7 :"Jadeja",
+            player8 : "Ashwin",
+            player9 : "Shardul",
+            player10 :"Bumrah(VC)",
+            player11 :"Shami",
+            
+           batter : function(){
+               return this.player1+"<br>"+this.player2+"<br>"+this.player3+"<br>"+this.player4+"<br>"+this.player5+"<br>";
+            },
+
+            allrounder : function(){
+                return this.player6+"<br>"+this.player7+"<br>"+this.player8+"<br>"+this.player9+"<br>";
+            },
+
+            bowler : function(){
+                return this.player10+"<br>"+this.player11+"<br>";
+            },
+            
+            detail : function(){
+                return this.teamName+"n "+this.status+" "+this.play+" Team<br>Coach : "+this.coach+"<br>";
+            },
+
+            start11 : function(){
+                return this.detail()+"<br>Playing 11<br><br>Batter :<br>"+this.batter()+"<br>All Rounder :<br>"+this.allrounder()+"<br>Bowler :<br>"+this.bowler();
+            }
+        }
+
+        document.getElementById('team').innerHTML= sport.start11();
+ 
+    </script>
+</body>
+</html>

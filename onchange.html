@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo1">Welcome</p>
+    <h1 onmouseover="changeTo(this)">Click me</h1>
+    <h1 id="t1" onclick="dispDate()">Time</h1>
+    <button onmouseover=document.getElementById("demo1").style.color="blue">Click here</button>
+
+    <p>Select Graduation</p>
+    <select id="selection" onchange="onChangeFunction()">
+        <option value="Select">Select</option>
+        <option value="BE">BE</option>
+        <option value="MCA">MCA</option>
+        <option value="BCA">BCA</option>
+        <option value="BSC">BSC</option>
+    </select>
+
+    <p id="demo"></p>
+    <script>
+
+        function onChangeFunction(){
+            var selectedValue= document.getElementById("selection").value;
+
+            document.getElementById("demo").innerHTML="Your Selection is "+selectedValue;
+        }
+
+        function changeTo(id){
+            id.style.color = "red";
+            id.style.fontSize = "20px";
+        }
+
+        function dispDate(){
+            document.getElementById("t1").innerHTML = Date();
+        }
+
+        function disp(id){
+            document.getElementById("demo1").style.color="blue";
+            document.getElementById("demo1").style.fontSize="30px";
+        }
+    </script>
+</body>
+</html>

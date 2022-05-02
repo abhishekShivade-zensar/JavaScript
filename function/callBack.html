@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="display"></p>
+    <p id="display1"></p>
+    <p id="display2"></p>
+    <button onclick="setTimeout(demo,2000)">click me setTimeout</button>
+
+    <script>
+        function greet(name){
+            document.write('<button onclick="setTimeout(callMe,2000)">click me</button>')
+            document.getElementById('display').innerHTML='Hi'+' '+name;
+        }
+
+        function callMe(){
+            document.getElementById('display1').innerHTML= 'I am callback function';
+        }
+
+        function demo(){document.getElementById('display2').innerHTML="Good Morning";}
+
+        greet('peter');
+    </script>
+</body>
+</html>

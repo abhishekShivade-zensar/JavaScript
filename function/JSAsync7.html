@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var api;
+        function getFrogsWithVitalSigns(params, callback) {
+          let frogIds, frogsListWithVitalSignsData;
+          api.fetchFrogs(params).then((frogs) => {
+              frogIds = frogs.map(({ id }) => id);
+                // The list of frogs did not include their health information,so lets fetch that now
+                return api.fetchFrogsVitalSigns(frogIds);
+                }).then((frogsListWithEncryptedVitalSigns) => {
+               // The list of frogs health info is encrypted. Our friend texted us the secret key to use in this step. This is used to decrypt the list of frogs encrypted health information
+               return api.decryptFrogsListVitalSigns(frogsListWithEncryptedVitalSigns,'pepsi');
+                }).then((data) => {
+                if (Array.isArray(data)) {
+                    frogsListWithVitalSignsData = data;
+                } else {
+                    frogsListWithVitalSignsData = data.map(({ vital_signs }) => vital_signs)
+                        console.log(frogsListWithVitalSignsData);
+                    }
+                }).catch((error) => {
+                    console.error(error);
+                });
+            }
+        const frogsWithVitalSigns = getFrogsWithVitalSigns({offset: 50}).then((result) => {
+            console.log(result);
+        }).catch((error) => {
+            console.error(error);
+        })
+        </script>
+</body>
+</html>

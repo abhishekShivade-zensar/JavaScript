@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+
+    <script>
+        let firstname="Abhihsek";
+        let lastname="Shivade";
+        let searchstring = "This is zensar training. Trainer is Praveen Hegde";
+        let templatetext=`welcome ${firstname}, ${lastname}`;
+        document.getElementById('demo').innerHTML=searchstring.indexOf("zensar");
+        document.getElementById('demo1').innerHTML=searchstring.lastIndexOf("is");
+        document.getElementById('demo2').innerHTML=searchstring.search("zensar");
+        document.getElementById('demo3').innerHTML=searchstring.match(/training/ig);
+        document.getElementById('demo4').innerHTML=searchstring.includes("training");
+        document.getElementById('demo5').innerHTML=searchstring.startsWith("This");
+        document.getElementById('demo6').innerHTML=searchstring.endsWith("Hegde");
+        document.getElementById('demo7').innerHTML=templatetext;
+
+    </script>
+</body>
+</html>

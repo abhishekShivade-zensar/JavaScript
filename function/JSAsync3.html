@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="display"></h2>
+
+    <script>
+        // function displayer(value){
+        //     document.getElementById('display').innerHTML= value;
+        // }
+
+        // function getFile(myCallBack){
+        //     let request1 = new XMLHttpRequest();
+        //     request1.open('GET',"ajax1.txt");
+        //     request1.onload = function(){
+        //         if(request1.status == 200){
+        //             myCallBack(this.responseText);
+        //         }else{
+        //             myCallBack("Error: "+request1.status);
+        //         }
+        //     }
+
+        //     request1.send();
+        // }
+
+        // getFile(displayer)
+
+    //     function displayer(value){
+    //         document.getElementById('display').innerHTML= value;
+    //     }
+
+    //    let myPromise = new Promise(function (myResolve, myReject){
+    //         let request1 = new XMLHttpRequest();
+    //         request1.open('GET',"ajax.txt");
+    //         request1.onload = function(){
+    //             if(request1.status == 200){
+    //                 myResolve(request1.responseText);
+    //             }else{
+    //                 myReject("Error: "+request1.status);
+    //             }
+    //         }
+    //         request1.send();
+    //     });
+
+    //     myPromise.then(
+    //         function(value){displayer(value);},
+    //         function(error){displayer(error);}
+    //     );
+
+    async function getfile(){
+        let myPromise= new Promise(function(resolve){
+            let request1 = new XMLHttpRequest();
+            request1.open('GET',"ajax.txt");
+            request1.onload = function(){
+                if(request1.status == 200){
+                    resolve(request1.responseText);
+                }else{
+                    resolve("Error: "+request1.status);
+                }
+            }
+            request1.send();
+        });
+
+            document.getElementById('display').innerHTML= await myPromise;
+        }
+
+        getfile();
+    </script>
+</body>
+</html>

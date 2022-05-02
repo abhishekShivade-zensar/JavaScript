@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="text1" type="number" min="1000" required>
+    <button id="valiadtion" onclick="myValidation()">Validate</button>
+    <h2 id="display"></h2>
+
+    <script>
+        function myValidation(){
+            const input1 = document.getElementById("text1");
+
+            if(!input1.validity.rangeOverflow){
+                document.getElementById('display').innerHTML = "text is too large";
+            }else{
+                
+                document.getElementById('display').innerHTML = "Input is valid";
+            }
+        }
+    </script>
+</body>
+</html>

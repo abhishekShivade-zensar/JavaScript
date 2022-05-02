@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const add = (num1, num2) => new Promise((resolve) => resolve(num1 + num2))
+
+        add(2, 4)
+        .then((result) => {
+            console.log(result) // result: 6
+            return result + 10
+        })
+        .then((result) => {
+            console.log(result) // result: 16
+            return result
+        })
+        .then((result) => {
+            console.log(result) // result: 16
+        })
+
+    </script>
+</body>
+</html>

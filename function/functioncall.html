@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        // const trainee = {
+        //     firstName: "amit",
+        //     lastName: "pandey",
+        //     fullName(firstName,lastName){
+        //         return this.firstName+" "+this.lastName;
+        //     }
+        // }
+
+        // document.getElementById('demo').innerHTML = trainee.fullName();
+
+        // function Callfunction(num1,num2){
+        //     return num1*num2;
+        // }
+
+        // document.getElementById('demo').innerHTML = Callfunction(10*20);
+        // console.log(Callfunction(20*30));
+        // window.alert(Callfunction(30*10));
+        // window.alert(Callfunction(40*10));
+
+        const trainee={
+            fullName:"praveen",
+            lastName:"hegde",
+            fullName: function(){
+                return this.firstName+" "+this.lastName;
+            }
+        }
+
+        const trainee1={
+            firstName:"Tamal",
+            lastName:"Hazra"
+        }
+
+        const trainee2={
+            firstName:"sachin",
+            lastName:"pandey"
+        }
+
+        // document.getElementById('demo').innerHTML = trainee.fullName.call(trainee2);
+
+        let fullName=trainee.fullName.bind(trainee1);
+        document.getElementById('demo').innerHTML =fullName();
+    </script>
+</body>
+</html>

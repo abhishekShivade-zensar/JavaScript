@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        let trainees = ['anup','abhishek','abhijeet','arpit','arya','avinash'];
+
+        let alltrainees, i, len;
+
+        // for(i = 0, len = trainees.length, alltrainees=[] ; i<len; i++){
+        //     alltrainees += trainees[i]+"<hr>";
+        // }
+
+        i = 0;
+        len = trainees.length;
+        alltrainees=[]; 
+
+        // for(; i<len; i++){
+        //     alltrainees += trainees[i]+"<hr>";
+        // }
+
+        for( ; i<len; ){
+            alltrainees += trainees[i]+"<hr>";
+            i++;
+        }
+
+        document.getElementById('demo').innerHTML = alltrainees;
+    </script>
+</body>
+</html>

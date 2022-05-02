@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        #addRow,#subRow,#mulRow,#divRow,#modRow,#incRow,#decRow,#assRow{
+            display: none;
+        }
+
+        td{
+            width: 100%;
+        }
+
+        /* #add,#sub,#mul,#div,#mod,#inc,#dec,#ass{
+            width: 300px;
+        } */
+
+    </style>
+</head>
+
+<body style="margin: 30px;">
+    <h1 id="num1"></h1>
+    <h1 id="num2"></h1>
+    <h3>Double Click on Button for result</h3>
+    <div style="margin: 20px;">
+        <button id="addBtn" ondblclick=document.getElementById("addRow").style.display="block">Addition</button>
+        <button id="subBtn" ondblclick=document.getElementById("subRow").style.display="block">Substraction</button>
+        <button id="mulBtn" ondblclick=document.getElementById("mulRow").style.display="block">Multiplication</button>
+        <button id="divBtn" ondblclick=document.getElementById("divRow").style.display="block">Division</button>
+        <button id="modBtn" ondblclick=document.getElementById("modRow").style.display="block">Modulus</button>
+        <button id="incBtn" ondblclick=document.getElementById("incRow").style.display="block">Increment</button>
+        <button id="decBtn" ondblclick=document.getElementById("decRow").style.display="block">Decrement</button>
+        <button id="assBtn" ondblclick=document.getElementById("assRow").style.display="block">Assignment</button>
+    </div>
+    <table class="table table-striped table-bordered table-hover table-text-centre"
+        style="font-size: 20px; width: 500px; ">
+        <tr>
+            <th>Operation</th>
+            <th>Result</th>
+        </tr>
+        <tr id="addRow">
+            <td>Addition</td>
+            <td id="add"></td>
+        </tr>
+        <tr id="subRow">
+            <td>Substraction</td>
+            <td id="sub"></td>
+        </tr>
+        <tr id="mulRow">
+            <td>Multiplication</td>
+            <td id="mul"></td>
+        </tr>
+        <tr id="divRow">
+            <td>Division</td>
+            <td id="div"></td>
+        </tr>
+        <tr id="modRow">
+            <td>Modulus</td>
+            <td id="mod"></td>
+        </tr>
+        <tr id="incRow">
+            <td>Increment</td>
+            <td id="inc"></td>
+        </tr>
+        <tr id="decRow">
+            <td>Decrement</td>
+            <td id="dec"></td>
+        </tr>
+        <tr id="assRow">
+            <td>Assignment</td>
+            <td id="ass"></td>
+        </tr>
+    </table>
+    <script>
+        let number1 = 200;
+        // document.writeln("Number1 = "+number1+"<br><br>"); 
+        document.getElementById('num1').innerHTML = "Number1 = " + number1;
+
+        let number2 = 150;
+        // document.writeln("Number2 = "+number2+"<br><br>"); 
+        document.getElementById('num2').innerHTML = "Number2 = " + number2;
+
+        let addition = number1 + number2;
+        // document.writeln("Number1 + Number2 = "+addition+"<br><br>"); 
+        document.getElementById('add').innerHTML = addition;
+
+        let substraction = number1 - number2;
+        // document.writeln("Number1 - Number2 = "+substraction+"<br><br>"); 
+        document.getElementById('sub').innerHTML = substraction;
+
+        let multiplication = number1 * number2;
+        // document.writeln("Number1 x Number2 = "+multiplication+"<br><br>");  
+        document.getElementById('mul').innerHTML = multiplication;
+
+        let division = number2 / number1;
+        // document.writeln("Number2 / Number1 = "+division+"<br><br>"); 
+        document.getElementById('div').innerHTML = division;
+
+        let modulus = number2 % number1;
+        // document.writeln("Number2 % Number1 = "+modulus+"<br><br>");  
+        document.getElementById('mod').innerHTML = modulus;
+
+        let increment = ++number1;
+        // document.writeln("Increment of Number1 = "+increment+"<br><br>");  
+        document.getElementById('inc').innerHTML = increment;
+        let decrement = --number1;
+        // document.writeln("Decrement  of Number1 = "+decrement+"<br><br>"); 
+        document.getElementById('dec').innerHTML = decrement;
+
+        number1 += number1;
+        // document.writeln("Number1 += is "+number1+"<br><br>");
+        // document.getElementById('td1').innerHTML= "inside table"+addition +"<br><br>"; 
+        document.getElementById('ass').innerHTML = number1;
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>count Numbers: <output id="result"></output> </p>
+    <button onclick="startWorker()">Start Worker</button>
+    <button onclick="stopworker()">Stop Worker</button>
+
+    <script>
+
+        let worker1;
+
+        function startWorker(){
+            if(typeof(worker1)=="undefined"){
+                worker1= new Worker("worker.js");
+            }
+
+            worker1.onmessage= function(event){
+                document.getElementById('result').innerHTML=event.data;
+            }
+        }
+
+        function stopworker(){
+            worker1.terminate();
+            worker1= undefined;
+        }
+    </script>
+</body>
+</html>
